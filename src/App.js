@@ -1,11 +1,19 @@
-import './App.less';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      123
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
+  render() {
+    return (
+        <div>
+          {this.props.children}
+        </div>
+    );
+  }
 }
 
 export default App;
