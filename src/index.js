@@ -6,9 +6,7 @@ import IRouter from './IRouter';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <IRouter />
-  </React.StrictMode>,
+    <IRouter />,
   document.getElementById('root')
 );
 

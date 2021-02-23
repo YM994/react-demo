@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff880c97-d069-4171-b8ca-2b930bb0c42d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavLeft/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavLeft/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/common.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/menuConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavLeft/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavLeft/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Less File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -67,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614048795612</updated>
       <workItem from="1614048796954" duration="342000" />
-      <workItem from="1614065959929" duration="7162000" />
+      <workItem from="1614065959929" duration="9393000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1614049107038</created>
@@ -104,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614068327102</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix 侧边栏布局">
+      <created>1614073264487</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614073264487</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +133,7 @@
     <MESSAGE value="fix 清除app内容" />
     <MESSAGE value="fix 下载安装包" />
     <MESSAGE value="fix 引入less" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 引入less" />
+    <MESSAGE value="fix 侧边栏布局" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 侧边栏布局" />
   </component>
 </project>

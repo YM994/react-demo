@@ -1,22 +1,23 @@
 import React, {Component} from 'react';
 import './style/common.less';
 import { Row, Col } from 'antd';
+import Header from './components/Header';
 import NavLeft from './components/NavLeft/index';
+import Footer from './components/Footer';
 class Admin extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <Row className="container">
                 <Col span={4} className="nav-left"><NavLeft/></Col>
                 <Col span={20} className="main">
-                    <Row>
-                        头部区域
+                    <Header/>
+                    <Row className="content" justify="center">
+                        {this.props.children}
                     </Row>
-                    <Row>
-                        内容区域
-                    </Row>
-                    <Row>
-                        尾部区域
-                    </Row>
+                    <Footer/>
                 </Col>
             </Row>
         );
