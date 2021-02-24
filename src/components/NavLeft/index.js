@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './index.less';
 import { Menu } from 'antd';
 import MenuConfig from '../../config/menuConfig';
+import {NavLink} from 'react-router-dom';
 const { SubMenu } = Menu;
 class Index extends Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class Index extends Component {
             }
             return <Menu.Item title={item.title} key={item.key}>
                 {item.title}
+                <NavLink to={item.key}></NavLink>
             </Menu.Item>
         })
     }

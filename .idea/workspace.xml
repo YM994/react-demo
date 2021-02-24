@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff880c97-d069-4171-b8ca-2b930bb0c42d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/menuConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NavLeft/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavLeft/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614048795612</updated>
       <workItem from="1614048796954" duration="342000" />
-      <workItem from="1614065959929" duration="9393000" />
+      <workItem from="1614065959929" duration="12489000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1614049107038</created>
@@ -110,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614073264487</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix 封装菜单">
+      <created>1614075655691</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614075655707</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +122,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="TEXT_FILTER_SETTINGS">
+                <TextFilterSettings>
+                  <option name="MATCH_CASE" value="true" />
+                </TextFilterSettings>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -134,6 +141,7 @@
     <MESSAGE value="fix 下载安装包" />
     <MESSAGE value="fix 引入less" />
     <MESSAGE value="fix 侧边栏布局" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix 侧边栏布局" />
+    <MESSAGE value="fix 封装菜单" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix 封装菜单" />
   </component>
 </project>
