@@ -19,18 +19,18 @@ function Index(props) {
   const [page, setPage] = useState(1);
   const [size, setSize] = useState(10);
   const [total, setTotal] = useState(null);
+  const [name, setName] = useState('');
   useEffect(() => {
     let params = {
       page,
-      size
+      size,
+      name
     }
     queryList(params).then(res => {
       setData(res.data.content)
       setTotal(res.data.total)
     })
-  }, [page,size]);
-
-  console.log(data)
+  }, [page,size,name]);
   const columns = [
     {
       title: '租户名',
@@ -75,12 +75,15 @@ function Index(props) {
     setPage(1)
     setSize(size)
   }
-
+  const getSearch =(e)=>{
+    setPage(1)
+    setName(e.target.value)
+  }
   return (
       <div>
         <Form layout={'inline'} {...formItemLayout}>
           <Form.Item label="申请人" style={{width: '20%'}}>
-            <Input placeholder="请输入"/>
+            <Input placeholder="请输入" allowClear onChange={getSearch} />
           </Form.Item>
           <Form.Item label="创建时间">
             <Space direction="vertical" size={12}>
