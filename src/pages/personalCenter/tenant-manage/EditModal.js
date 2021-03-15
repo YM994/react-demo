@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import { Modal, Button } from 'antd';
 const EditModal = (props) => {
-  const { visible, changeVisible } = props;
+  const { visible, changeVisible,rowObj,disabled } = props;
+  console.log(rowObj,disabled)
   const handleOk = () =>{
     changeVisible(false);
   }
@@ -10,7 +11,7 @@ const EditModal = (props) => {
   }
   return (
       <div>
-        <Modal title="Basic Modal" visible={visible} onOk={handleOk} onCancel={handleCancel}>
+        <Modal title={disabled?'编辑租户':'创建租户'} visible={visible} onOk={handleOk} onCancel={handleCancel}>
           <p>Some contents...</p>
           <p>Some contents...</p>
           <p>Some contents...</p>

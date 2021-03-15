@@ -46,7 +46,7 @@ function Index(props) {
       key: 'action',
       render: (text, record) => (
           <Space size="middle">
-            <a>查看</a>
+            <a onClick={() => handleEdit(record)}>查看</a>
             <a>删除</a>
           </Space>
       ),
@@ -58,6 +58,9 @@ function Index(props) {
   const [total, setTotal] = useState(null);
   const [name, setName] = useState('');
   const [visible, setVisible] = useState(false);
+  const [rowObj, setRowObj] = useState({});
+  const [disabled, setDisabled] = useState(false);
+
   useEffect(() => {
     let params = {
       page,
@@ -81,8 +84,17 @@ function Index(props) {
     setPage(1)
     setName(e.target.value)
   }
+  // 新增
   const handleAdd = () =>{
     setVisible(true)
+    setRowObj({})
+    setDisabled(false)
+  }
+  // 编辑
+  const handleEdit = (record) =>{
+    setVisible(true)
+    setRowObj(record)
+    setDisabled(true)
   }
   const changeVisible = (bool) =>{
     setVisible(bool)
@@ -102,7 +114,12 @@ function Index(props) {
         <Row justify="end" style={{marginTop:'20px',marginBottom:'20px'}}>
           <Button type={'primary'} onClick={handleAdd}>新增</Button>
         </Row>
-        <EditModal visible={visible} changeVisible={changeVisible}></EditModal>
+        <EditModal
+            visible={visible}
+            changeVisible={changeVisible}
+            rowObj={rowObj}
+            disabled={disabled}
+        ></EditModal>
         <Table
             columns={columns}
             dataSource={data}
