@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-// import {Col,Row} from 'antd';
+import {Col,Row} from 'antd';
 import './index.less'
 class Index extends Component {
     render() {
         return (
             <div className="header">
-                {/*<Row className="header-top">*/}
-                {/*    <Col span="24">*/}
-                {/*        <span>欢迎，{this.state.userName}</span>*/}
-                {/*        <a onClick={this.onLogout}>退出</a>*/}
-                {/*    </Col>*/}
-                {/*</Row>*/}
+                <Row className="header-top">
+                    <Col span="24">
+                        <span>欢迎，W9008770</span>
+                        {/*<a onClick={this.onLogout}>退出</a>*/}
+                    </Col>
+                </Row>
 
                 {/*<Row className="breadcrumb">*/}
                 {/*    <Col span="4" className="breadcrumb-title">*/}

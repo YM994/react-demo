@@ -14,7 +14,7 @@ class Admin extends Component {
                 <Col span={4} className="nav-left"><NavLeft/></Col>
                 <Col span={20} className="main">
                     <Header/>
-                    <Row className="content" justify="center">
+                    <Row className="content" >
                         {this.props.children}
                     </Row>
                     <Footer/>

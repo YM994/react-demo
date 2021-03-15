@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import App from './App';
 import Admin from './Admin';
+import Home from './pages/Home/index'
+import PersonalCenter from './pages/personalCenter/index'
 class IRouter extends Component {
     render() {
         return (
@@ -13,9 +15,8 @@ class IRouter extends Component {
                     <Route path="/" render={()=>
                         <Admin>
                             <Switch>
-                            {/*    <Route path="/admin/home">*/}
-                            {/*        <Home/>*/}
-                            {/*    </Route>*/}
+                                <Route exact path="/home"><Home/></Route>
+                                <Route exact path="/home/tenant-center"> <PersonalCenter/></Route>
                             </Switch>
                         </Admin>
                     }>
