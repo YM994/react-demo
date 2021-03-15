@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
-import {Form, Input, DatePicker, Space, Table, Pagination,Row} from 'antd';
-
+import {Form, Input, DatePicker, Space, Table, Pagination,Row,Button} from 'antd';
+import EditModal from './EditModal'
 const {RangePicker} = DatePicker;
 
 async function queryList(params) {
@@ -15,22 +15,6 @@ function Index(props) {
     labelCol: {span: 8},
     wrapperCol: {span: 16},
   }
-  const [data, setData] = useState([]);
-  const [page, setPage] = useState(1);
-  const [size, setSize] = useState(10);
-  const [total, setTotal] = useState(null);
-  const [name, setName] = useState('');
-  useEffect(() => {
-    let params = {
-      page,
-      size,
-      name
-    }
-    queryList(params).then(res => {
-      setData(res.data.content)
-      setTotal(res.data.total)
-    })
-  }, [page,size,name]);
   const columns = [
     {
       title: '租户名',
@@ -68,6 +52,24 @@ function Index(props) {
       ),
     },
   ];
+  const [data, setData] = useState([]);
+  const [page, setPage] = useState(1);
+  const [size, setSize] = useState(10);
+  const [total, setTotal] = useState(null);
+  const [name, setName] = useState('');
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    let params = {
+      page,
+      size,
+      name
+    }
+    queryList(params).then(res => {
+      setData(res.data.content)
+      setTotal(res.data.total)
+    })
+  }, [page,size,name]);
+
   const onChange = (page,size) => {
     setPage(page)
   }
@@ -78,6 +80,12 @@ function Index(props) {
   const getSearch =(e)=>{
     setPage(1)
     setName(e.target.value)
+  }
+  const handleAdd = () =>{
+    setVisible(true)
+  }
+  const changeVisible = (bool) =>{
+    setVisible(bool)
   }
   return (
       <div>
@@ -91,6 +99,10 @@ function Index(props) {
             </Space>,
           </Form.Item>
         </Form>
+        <Row justify="end" style={{marginTop:'20px',marginBottom:'20px'}}>
+          <Button type={'primary'} onClick={handleAdd}>新增</Button>
+        </Row>
+        <EditModal visible={visible} changeVisible={changeVisible}></EditModal>
         <Table
             columns={columns}
             dataSource={data}
